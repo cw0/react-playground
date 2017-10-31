@@ -5,10 +5,11 @@ import { bindActionCreators } from "redux";
 import * as actions from "../actions/counterActions";
 import CounterForm from "../components/CounterForm";
 
-export const CounterPage = props => {
+export const CounterPage = (props) => {
+  
   return (
     <CounterForm
-      incrementCounter={props.actions.incrementCount}
+      incrementCounter={props.actions.incrementCounter}
       counter={props.counter}
     />
   );
@@ -20,6 +21,7 @@ CounterPage.propTypes = {
 };
 
 function mapStateToProps(state) {
+  console.log(state);
   return {
     counter: state.counter
   };

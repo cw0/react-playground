@@ -9,15 +9,16 @@ class CounterForm extends React.Component {
   }
 
   incrementCounter() {
+    
     this.props.incrementCounter(this.props.counter);
   }
 
   render() {
-    const {counter} = this.props; //sweet es6 destructuring here
-
+   
+   
     return (
       <div>
-        <h1>Counter: <b>{counter}</b></h1>
+        <h1>Counter: <b>{this.props.counter}</b></h1>
         <br />
         <button type="button" onClick={this.incrementCounter}>Increment</button>
       </div>

@@ -1,13 +1,11 @@
 import {INCREMENT_COUNTER} from '../constants/actionTypes';
-import initialState from './initialState';
+//import initialState from './initialState';
 
-export default function counterReducer(state = initialState, action) {
-    console.log(action.type);
+export default function counterReducer(state = 0, action) {
+   
     switch (action.type) {
         case INCREMENT_COUNTER:
-            return Object.assign({}, state, {
-                counter: action.counter + 1
-            });
+            return state + 1;
         default:
             return state;
     }
