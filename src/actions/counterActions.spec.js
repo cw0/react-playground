@@ -11,4 +11,13 @@ describe('Actions', () => {
 
       expect(actual).toEqual(expected);
     });
+
+    it('should create an action to decrement counter', () => {
+      const actual = ActionCreators.decrementCounter();
+      const expected = { 
+        type: ActionTypes.DECREMENT_COUNTER
+      };
+
+      expect(actual).toEqual(expected);
+    });
 });

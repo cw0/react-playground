@@ -5,8 +5,7 @@ import { bindActionCreators } from "redux";
 import * as actions from "../actions/counterActions";
 import CounterForm from "../components/CounterForm";
 
-export const CounterPage = (props) => {  
-  console.log(actions, props);
+export const CounterPage = (props) => {
   return (
     <CounterForm
       incrementCounter={props.actions.incrementCounter}

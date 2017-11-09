@@ -19,4 +19,11 @@ describe('Reducers::FuelSavings', () => {
 
         expect(reducer(getInitialState(), action)).toEqual(expected);
     });
+
+    it('should handle DECREMENT_COUNTER', () => {
+        const action = { type: ActionTypes.DECREMENT_COUNTER };
+        const expected = -1;
+
+        expect(reducer(getInitialState(), action)).toEqual(expected);
+    });
 });
