@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Button from 'material-ui/Button';
 
 class CounterForm extends React.Component {
   constructor(props, context) {
@@ -24,12 +25,12 @@ class CounterForm extends React.Component {
           Counter: <b>{this.props.counter}</b>
         </h1>
         <br />
-        <button type="button" id="btn-increment-counter" onClick={this.incrementCounter}>
+        <Button raised color="primary" type="button" id="btn-increment-counter" onClick={this.incrementCounter}>
           Increment
-        </button>
-        <button type="button" id="btn-decrement-counter" onClick={this.decrementCounter}>
+        </Button>
+        <Button raised color="primary" type="button" id="btn-decrement-counter" onClick={this.decrementCounter}>
           Decrement
-        </button>
+        </Button>
       </div>
     );
   }

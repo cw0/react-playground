@@ -38,6 +38,10 @@ export default {
   ],
   module: {
     rules: [
+      { 
+        test: /\.css$/, 
+        use: 'css-loader/locals'
+      },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
@@ -95,7 +99,7 @@ export default {
         ]
       },
       {
-        test: /(\.css|\.scss|\.sass)$/,
+        test: /(\.scss|\.sass)$/,
         exclude: /node_modules/,
         use: [
           'style-loader',
