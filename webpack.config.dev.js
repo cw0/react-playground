@@ -38,9 +38,15 @@ export default {
   ],
   module: {
     rules: [
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader?modules',
+        include: /typeface-roboto/
+      },
       { 
         test: /\.css$/, 
-        use: 'css-loader/locals'
+        use: 'css-loader/locals',
+        exclude: /typeface-roboto/
       },
       {
         test: /\.jsx?$/,
